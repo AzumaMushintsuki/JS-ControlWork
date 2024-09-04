@@ -3,71 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Users</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        main{
-            width: 1000px;
-            margin: 30px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        .user{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            flex-direction: column;
-            height: 200px;
-            width: 450px;
-            border: solid 4px peachpuff;
-            border-radius: 20px;
-            background: bisque;
-        }
-        .user button{
-            height: 40px;
-            width: 90%;
-            background: #fce8d0;
-            border: solid 4px peachpuff;
-            border-radius: 20px;
-            font-size: 20px;
-            font-weight: 800;
-        }
-        .user button:hover{background: peachpuff;}
-
-    </style>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<script>
-    fetch(`https://jsonplaceholder.typicode.com/users`)
-        .then(users => users.json())
-        .then(users => {
-            const main = document.createElement(`main`)
-            document.body.appendChild(main)
-            for (const user of users) {
-                const userDiv = document.createElement(`div`);
-                userDiv.classList.add(`user`);
-                const id = document.createElement(`h3`);
-                id.innerText = `Id: ${user.id}`;
-                const name = document.createElement(`h2`);
-                name.innerText = `${user.name}`;
-                const button = document.createElement(`button`);
-                button.innerText = `User Info`;
-                button.onclick = function () {
-                    localStorage.setItem(`user`, JSON.stringify(user));
-                    location.href = `user-details.html`
-                }
-                userDiv.append(id, name, button);
-                main.appendChild(userDiv);
-
-            }
-        })
-</script>
+<script src="index.js"></script>
 </body>
 </html>

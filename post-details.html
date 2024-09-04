@@ -3,64 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Post details</title>
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-    main {
-      width: 90%;
-      margin: 30px auto;
-      background: bisque;
-      padding: 20px;
-      border: solid 4px peachpuff;
-      border-radius: 20px;
-    }
-    section{
-      margin: 0 auto;
-      width: 90%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    div{
-      width: 24%;
-      height: 310px;
-      background: bisque;
-      padding: 20px;
-      border: solid 4px peachpuff;
-      border-radius: 20px;
-      margin-bottom: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="post-details.css">
 </head>
 <body>
-<script>
-  const post = JSON.parse(localStorage.getItem(`post`));
-  const main = document.createElement(`main`);
-  const section = document.createElement(`section`)
-  document.body.append(main, section);
-  for (const key in post) {
-    const keyOfPost = document.createElement(`h2`);
-    keyOfPost.innerText = key[0].toUpperCase() + key.slice(1) + `: ${post[key]}`;
-    main.append(keyOfPost);
-  }
-  fetch(`https://jsonplaceholder.typicode.com/posts/${post.id}/comments`)
-          .then(comments => comments.json())
-          .then(comments => {
-            for (const comment of comments) {
-              const div = document.createElement(`div`);
-              for (const key in comment){
-                const keyOfComment = document.createElement(`h3`);
-                keyOfComment.innerText = key[0].toUpperCase() + key.slice(1) + `: ${comment[key]}`;
-                div.append(keyOfComment)
-              }
-              section.append(div)
-            }
-          })
-
-</script>
+<script src="post-details.js"></script>
 </body>
 </html>

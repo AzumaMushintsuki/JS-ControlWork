@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main {
+    width: 90%;
+    margin: 30px auto;
+    background: bisque;
+    padding: 20px;
+    border: solid 4px peachpuff;
+    border-radius: 20px;
+}
+section{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+div{
+    width: 24%;
+    height: 310px;
+    background: bisque;
+    padding: 20px;
+    border: solid 4px peachpuff;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
