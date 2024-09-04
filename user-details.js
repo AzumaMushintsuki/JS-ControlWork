@@ -1,7 +1,8 @@
 // Отримуємо дані з локального сховища та створюємо обгортку main
 const user = JSON.parse(localStorage.getItem(`user`));
 const main = document.createElement(`main`);
-document.body.appendChild(main);
+const section = document.createElement(`section`);
+document.body.append(main, section);
 // Перебираємо кожен ключ та створюємо для нього h2
 for (const key in user) {
     const keyOfUser = document.createElement(`h2`);
@@ -34,7 +35,7 @@ for (const key in user) {
 const button = document.createElement(`button`);
 button.innerText = `Posts of current user`;
 let counter = 0
-const section = document.createElement(`section`)
+
 button.onclick = function (){
     if (counter < 1){
         // Отримуємо пости юзера з ендпоінта
@@ -44,7 +45,7 @@ button.onclick = function (){
                 // Створюємо обгортку для всіх постів
                 const container = document.createElement(`div`);
                 container.classList.add(`container`);
-                // Для кожного поста створюемо обгортку, параграф та кнопку
+                // Для кожного поста створюємо обгортку, параграф та кнопку
                 for (const post of posts) {
                     const postDiv = document.createElement(`div`);
                     postDiv.classList.add(`post`);
@@ -67,4 +68,3 @@ button.onclick = function (){
     }
 }
 section.append(button);
-document.body.appendChild(section);
