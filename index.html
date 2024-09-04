@@ -62,7 +62,7 @@
                 const button = document.createElement(`button`);
                 button.innerText = `User Info`;
                 button.onclick = function () {
-                    localStorage.setItem(`userId`, `${user.id}`);
+                    localStorage.setItem(`user`, JSON.stringify(user));
                     location.href = `user-details.html`
                 }
                 userDiv.append(id, name, button);
