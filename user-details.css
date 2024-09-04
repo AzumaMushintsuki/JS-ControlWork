@@ -5,7 +5,7 @@
 }
 main{
     width: 90%;
-    margin: 30px auto;
+    margin: 20px auto;
     background: bisque;
     padding: 20px;
     border: solid 4px peachpuff;
@@ -33,11 +33,11 @@ section>button:hover{background: peachpuff;}
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .post{
     width: 19%;
-    height: 100px;
+    height: 120px;
     background: bisque;
     border: solid 4px peachpuff;
     border-radius: 20px;
@@ -48,7 +48,7 @@ section>button:hover{background: peachpuff;}
     text-align: center;
     flex-direction: column;
 }
-.post p{font-size: 20px}
+.post p{font-size: 18px}
 .post button{
     height: 30px;
     width: 90%;
